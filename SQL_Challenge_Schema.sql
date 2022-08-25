@@ -7,18 +7,18 @@
 -- To reset the sample schema, replace everything with
 -- two dots ('..' - without quotes).
 CREATE TABLE "Dept_Mgr" (
-    "dept_no" VARCHAR(10)   NOT NULL,
+    "dept_no" VARCHAR(60)   NOT NULL,
     "emp_no" INT   NOT NULL
 );
 
 CREATE TABLE "Dept_Emp" (
     "emp_no" INT   NOT NULL,
-    "dept_no" VARCHAR(10)   NOT NULL
+    "dept_no" VARCHAR(60)   NOT NULL
 );
 
 CREATE TABLE "Titles" (
-    "title_id" VARCHAR(10)   NOT NULL,
-    "title" VARCHAR(30)   NOT NULL,
+    "title_id" VARCHAR(60)   NOT NULL,
+    "title" VARCHAR()   NOT NULL,
     CONSTRAINT "pk_Titles" PRIMARY KEY (
         "title_id"
      )
@@ -31,11 +31,11 @@ CREATE TABLE "Salaries" (
 
 CREATE TABLE "Employees" (
     "emp_no" INT   NOT NULL,
-    "emp_title_id" VARCHAR(10)   NOT NULL,
+    "emp_title_id" VARCHAR(60)   NOT NULL,
     "birth_date" DATE   NOT NULL,
-    "first_name" VARCHAR(50)   NOT NULL,
-    "last_name" VARCHAR(50)   NOT NULL,
-    "sex" VARCHAR(1)   NOT NULL,
+    "first_name" VARCHAR(60)   NOT NULL,
+    "last_name" VARCHAR(60)   NOT NULL,
+    "sex" VARCHAR(60)   NOT NULL,
     "hire_date" DATE   NOT NULL,
     CONSTRAINT "pk_Employees" PRIMARY KEY (
         "emp_no"
@@ -43,8 +43,8 @@ CREATE TABLE "Employees" (
 );
 
 CREATE TABLE "Departments" (
-    "dept_no" VARCHAR(10)   NOT NULL,
-    "dept_name" VARCHAR(50)   NOT NULL,
+    "dept_no" VARCHAR(60)   NOT NULL,
+    "dept_name" VARCHAR(60)   NOT NULL,
     CONSTRAINT "pk_Departments" PRIMARY KEY (
         "dept_no"
      )
